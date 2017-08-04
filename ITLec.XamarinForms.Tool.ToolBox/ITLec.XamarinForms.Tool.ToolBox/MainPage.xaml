@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ITLec.XamarinForms.Tool.ToolBox"
+             
+             
+             xmlns:autoCompleteLookup= "clr-namespace:ITLec.XamarinForms.Tool.AutoCompleteLookup;assembly=ITLec.XamarinForms.Tool.AutoCompleteLookup"
+             
+             xmlns:advancedProgressBar= "clr-namespace:ITLec.XamarinForms.Tool.AdvancedProgressBar;assembly=ITLec.XamarinForms.Tool.AdvancedProgressBar"
+             
+             x:Class="ITLec.XamarinForms.Tool.ToolBox.MainPage">
+
+
+    <StackLayout VerticalOptions="CenterAndExpand" >
+        <Label Text="Welcome to Xamarin Forms!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+    <autoCompleteLookup:AutoCompleteLookup x:Name="keyAutoCompleteLookup"  >
+    </autoCompleteLookup:AutoCompleteLookup>
+
+    <advancedProgressBar:AdvancedProgressBar x:Name="advancedProgressBar">
+    </advancedProgressBar:AdvancedProgressBar>
+
+    <Button x:Name="btnRunProgressBar" Text="Click Here To Run Progress Bar"  
+            Clicked="btnRunProgressBar_OnClick"></Button>
+
+    </StackLayout>
+</ContentPage>
