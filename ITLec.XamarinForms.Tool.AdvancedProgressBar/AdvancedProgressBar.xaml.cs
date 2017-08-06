@@ -15,6 +15,9 @@ namespace ITLec.XamarinForms.Tool.AdvancedProgressBar
             InitializeComponent();
             Init();
             Reset();
+
+            activityIndicator.IsRunning = false;
+            activityIndicator.IsVisible = false;
         }
 
         private void Init()
@@ -30,10 +33,21 @@ namespace ITLec.XamarinForms.Tool.AdvancedProgressBar
             get;
             set;
         }
+        public bool IsDisplayActivityIndicator
+        {
+            get;
+            set;
+        }
 
         public async Task Run()
         {
             IsRunning = true;
+
+            if (IsDisplayActivityIndicator == true)
+            {
+                activityIndicator.IsRunning = true;
+                activityIndicator.IsVisible = true;
+            }
             double counter = 0;
 
             double totalCounter = TaskItems.Sum(e => e.Wieght);
@@ -52,6 +66,10 @@ namespace ITLec.XamarinForms.Tool.AdvancedProgressBar
             }
 
             IsRunning = false;
+
+            
+                activityIndicator.IsRunning = false;
+                activityIndicator.IsVisible = false;
         }
 
         public double CurrentPercentage

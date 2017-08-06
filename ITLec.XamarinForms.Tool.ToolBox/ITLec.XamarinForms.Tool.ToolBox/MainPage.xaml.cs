@@ -32,6 +32,7 @@ namespace ITLec.XamarinForms.Tool.ToolBox
                 tskItems.Add(new AdvancedProgressBar.TaskItem { Task = new Task(() => { YourCode(); }), TaskName = "Task#: " + i.ToString(), Wieght = 100 });
             }
             advancedProgressBar.TaskItems = tskItems;
+            advancedProgressBar.IsDisplayActivityIndicator = true;
             await advancedProgressBar.Run();
         }
 

@@ -13,6 +13,8 @@
 
         </ProgressBar>
 
+        <ActivityIndicator  x:Name="activityIndicator" 
+                           Color="Black" />
         <Label Text="%0" x:Name="lbl"
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
