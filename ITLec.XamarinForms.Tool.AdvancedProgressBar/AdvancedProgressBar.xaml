@@ -7,6 +7,7 @@
 
         <ProgressBar x:Name="mainProgressBar" Progress="0.0"
                                           WidthRequest="300"
+                     
                  HeightRequest="20" 
                  VerticalOptions="Center"
                  HorizontalOptions="Center">

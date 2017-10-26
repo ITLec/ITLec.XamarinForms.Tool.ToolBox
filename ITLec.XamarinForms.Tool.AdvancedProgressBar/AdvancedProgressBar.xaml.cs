@@ -18,8 +18,18 @@ namespace ITLec.XamarinForms.Tool.AdvancedProgressBar
 
             activityIndicator.IsRunning = false;
             activityIndicator.IsVisible = false;
+
+            if (BackgroundColor != null)
+            {
+                mainProgressBar.BackgroundColor = BackgroundColor;
+            }
         }
 
+        public Color BackgroundColor
+        {
+            get;
+            set;
+        }
         private void Init()
         {
             if (TaskItems != null)
